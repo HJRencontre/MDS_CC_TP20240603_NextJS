@@ -1,0 +1,22 @@
+datasource db {
+  provider = "postgresql"
+  url      = "postgres://default:zdhHI5CWFiu9@ep-misty-haze-a234pidi-pooler.eu-central-1.aws.neon.tech:5432/verceldb?sslmode=require"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id       Int     @id @default(autoincrement())
+  username String  @unique
+  password String
+  images   Image[]
+}
+
+model Image {
+  id     Int    @id @default(autoincrement())
+  url    String
+  ownerId Int
+  owner  User   @relation(fields: [ownerId], references: [id])
+}
