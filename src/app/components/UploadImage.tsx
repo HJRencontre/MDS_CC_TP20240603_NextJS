@@ -13,7 +13,7 @@ export default function UploadImage({
 }: UploadImageProps) {
   return (
     <div className="w-screen h-screen flex items-center justify-center absolute top-0 left-0">
-      <div className="w-[732px] h-[775px] rounded-xl bg-[#323233] flex flex-col items-center">
+      <div className="h-4/5 w-4/5 md:w-[732px] md:h-[775px] rounded-xl bg-[#323233] flex flex-col items-center">
         <div className="w-full h-11 flex items-center justify-center border-b border-b-gray-700">
           <p className="text-white">Créer une nouvelle publication</p>
         </div>
@@ -40,7 +40,9 @@ export default function UploadImage({
               fill="currentColor"
             ></path>
           </svg>
-          <p className="text-white text-2xl">Faites glisser les photos ici</p>
+          <p className="text-white text-lg sm:text-xl md:text-2xl">
+            Faites glisser les photos ici
+          </p>
         </div>
         <div className="w-52 h-[32px] rounded-lg text-white mt-5 text-sm font-medium bg-[rgb(0,149,246)] flex items-center justify-center">
           <CldUploadWidget uploadPreset="ml_default">
@@ -51,7 +53,7 @@ export default function UploadImage({
         </div>
       </div>
       <div
-        className="absolute right-10 top-10 invert cursor-pointer"
+        className="absolute right-4 sm:right-8 md:right-10 top-10 invert cursor-pointer"
         onClick={() => setShowUploadImage(false)}
       >
         <svg
