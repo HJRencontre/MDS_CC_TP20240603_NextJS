@@ -12,7 +12,7 @@ export default function UploadImage({
   setShowUploadImage,
 }: UploadImageProps) {
   return (
-    <div className="w-screen h-screen flex items-center justify-center absolute top-0 left-0">
+    <div className="w-screen h-screen flex items-center justify-center absolute top-0 left-0 z-40">
       <div className="h-4/5 w-4/5 md:w-[732px] md:h-[775px] rounded-xl bg-[#323233] flex flex-col items-center">
         <div className="w-full h-11 flex items-center justify-center border-b border-b-gray-700">
           <p className="text-white">Créer une nouvelle publication</p>
