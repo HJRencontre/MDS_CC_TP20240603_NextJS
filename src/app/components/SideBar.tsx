@@ -8,7 +8,7 @@ export default function SideBar() {
 
   return (
     <>
-      <div className="w-14 md:w-[230px] h-screen bg-black border-r border-r-gray-800">
+      <div className="w-14 md:w-[230px] h-screen bg-black border-r border-r-gray-800 fixed">
         <ul className="flex items-center flex-col gap-5">
           <li className="flex items-center flex-col mt-10 p-3 w-[220px] md:w-auto h-14">
             <svg
